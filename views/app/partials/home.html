@@ -1,0 +1,12 @@
+<h1>Liste Utilisateurs</h1>
+
+<div ng-repeat="record in records">
+	<p>
+		<strong>{{record.username}}</strong>
+	</p>
+</div>
+
+<form ng-submit="addUser()">
+	<input type="text" placeholder="Utilisateur" ng-model="newUser.username"/><br>
+	<input type="submit" value="Envoyer"/>
+</form>

@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
   },
-  "author": "Jonathan PLATON",
+  "author": "ghaffar",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.5.8",

@@ -1,124 +1,97 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8"/>
-	<title>Appli-angular</title>
-	<link rel="stylesheet" type="text/css" href="css/app.css">
 
-	<script type="text/javascript" src="assets/angular/angular.min.js"></script>
-	<script type="text/javascript" src="assets/angular-route/angular-route.min.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
-	<script type="text/javascript" src="js/controller/users.js"></script>
-	<script type="text/javascript" src="js/service/user.js"></script>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <Title>Happycount</Title>
+
 </head>
 
-<body ng-app="proApp">
-
+<body>
 <header>
-	<div class="Id-visuelle">
-		<img src=""/>
-	</div>
-	<div class="Titre-appli">
-		<h1>HappyCount</h1>
-	</div>
-	<div class="username">
-	<p>Roger</p>
-	</div>
+<h1>HappyCount</h1> 
+<i class="fa fa-user user1" aria-hidden="true"> Johnny</i>
 </header>
 
-<h2>MY TEAMS</h2>
-<div id="Partie1">
+<input type="search" placeholder="Recherche" name="the_search"> <a href="#"><i class="fa fa-search fa-2x" aria-hidden="true"></i></a>
 
-    <div class="team1">
-    	<h3>Team </br>FOOTBALL</h3>
-    	<button name="button">ACCES</button>
-    </div>
- 	<div class="team2">
-    	<h3>Team </br>TAF</h3>
-    	<button name="button">ACCES</button>
-    </div>
- 	<div class="team3">
-    	<h3>Team </br>FAMILY</h3>
-    	<button name="button">ACCES</button>
-     </div>
+<h2>Mes Equipes</h2>
 
-</div>
+<ul class="clearfix">
+  <li>
+    <figure>
+    <h3>TEAM </br>FOOTBALL</h3>
+      <a href="#" target="_blank"><img src="images/foot1.jpg" alt="football"></a>
+      <figcaption><a href="#" class="button">ACCEDER</a></figcaption>
+    </figure>
+  </li>
+  <li>
+    <figure>
+    <h3>TEAM </br>WORK</h3>
+       <a href="#" target="_blank"><img src="images/work.jpg" alt="work"></a>
+      <figcaption><a href="#" class="button">ACCEDER</a></figcaption>
+    </figure>
+  </li>
+  <li>
+    <figure>
+    <h3>TEAM </br>FAMILY</h3>
+       <a href="#" target="_blank"><img src="images/family1.jpg" alt="famille"></a>
+      <figcaption><a href="#" class="button">ACCEDER</a></figcaption>
+    </figure>
+  </li>
+  <li>
+    <figure>
+    <h3>TEAM </br>TRAVEL</h3>
+       <a href="#" target="_blank"><img src="images/travel.jpg" alt="voyage"></a>
+      <figcaption><a href="#" class="button">ACCEDER</a></figcaption>
+    </figure>
+  </li>
 
-<h2>MES ACTIONS</h2>
+<h2>Mes dernières dépenses</h2>
 
+  <li>
+    <figure>
+    <h3>MIAM-MIAM</h3>
+       <a href="#" target="_blank"><img src="images/bouffe.jpg" alt="macaron"></a>
+      <h4>Anniv Toto</h4>
+      <h5>70$</h5>
+      <figcaption><a href="#" class="button">ACCES COMPTE</a></figcaption>
+    </figure>
+  </li>
+  <li>
+    <figure>
+    <h3>GLOU-GLOU</h3>
+       <a href="#" target="_blank"><img src="images/bar.jpg" alt="alcool"></a>
+      <h4>Afterwork</h4>
+      <h5>20$</h5>
+       <figcaption><a href="#" class="button">ACCES COMPTE</a></figcaption>
+    </figure>
+  </li>
+  <li>
+    <figure>
+    <h3>ROADTRIP</h3>
+       <a href="#" target="_blank"><img src="images/roadtrip.jpg" alt="roadtrip"></a>
+      <h4>Carburant</h4>
+      <h5>40$</h5>
+       <figcaption><a href="#" class="button">ACCES COMPTE</a></figcaption>
+    </figure>
+  </li>
+  <li>
+    <figure>
+    <h3>CADEAUX</h3>
+       <a href="#" target="_blank"><img src="images/cadeau.jpg" alt=""></a>
+      <h4>Noel</h4>
+      <h5>25$</h5>
+       <figcaption><a href="#" class="button">ACCES COMPTE</a></figcaption>
+    </figure>
+  </li>
 
+</ul>
 
-
-<!--<section class="projects">
-		<h3 class="presentationprojects">Mes projets</h3>
-	<div class="projet1">
-  			<ul>
-    			<li><a href="#">toto</a></li>
-    			<li><a href="#">tata</a></li>
-    			<li><a href="#">titi</a></li>
-  			</ul>
-		
-		<article>
-  			<h4>Resto</h4>
-  			<p>Débiteur</p>
-  			<p>Créditeur</p>
-		</article>
-		<div class="ajout">
-			<p> + ajout user</p>
-			<p> + ajout dépenses</p>
-		</div>
-	</div>
-
-	<div class="projet2">
-		<nav>
-  			<ul>
-    			<li><a href="#">toto</a></li>
-    			<li><a href="#">tata</a></li>
-    			<li><a href="#">titi</a></li>
-  			</ul>
-		</nav>
-
-		<article>
-  			<h4>Essence</h4>
-  			<p>Débiteur</p>
-  			<p>Créditeur</p>
-		</article>
-		<div class="ajout">
-			<p> + ajout user</p>
-			<p> + ajout dépenses</p>
-		</div>
-	</div>
-
-	<div class="projet3">
-		<nav>
-  			<ul>
-    			<li><a href="#">toto</a></li>
-    			<li><a href="#">tata</a></li>
-    			<li><a href="#">titi</a></li>
-  			</ul>
-		</nav>
-
-		<article>
-  			<h4>Bar</h4>
-  			<p>Débiteur</p>
-  			<p>Créditeur</p>
-		</article>
-		<div class="ajout">
-			<p> + ajout user</p>
-			<p> + ajout dépenses</p>
-		</div>
-	</div>
-</section>
-
-<section class="historique">
-<div class="historique">
-	<h3>Historique user</h3>
-
-</div>
-
-</section>
-
-	<div class="container" ng-view></div>-->
 
 </body>
+
 </html>

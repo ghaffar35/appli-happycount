@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8">
+    <title>Mon groupe</title>
+    <link rel="stylesheet" href="mongrup.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+<script src="app.js"></script>
+  </head>
+<body>
+
+<section> 
+<h2>Liste des depenses</h2>  
+<div  class="tbl-header" >
+<table cellpadding="0" cellspacing="0" border="0">
+  <thead>
+    <tr>
+      <th>N°</th>
+      <th>Payeur</th>
+      <th>Montant</th>
+      <th>Concernes</th>
+      <th>date</th>
+      <th>nbconcernes</th>
+      <th>usergroup</th>
+      <th>description</th>
+    </tr>
+  </thead>
+</table>
+</div>
+<div  class="tbl-content" ng-controller="DepenseCtrl">
+<table cellpadding="0" cellspacing="0" border="0">
+  <tbody>
+
+    <tr class="depense" ng-repeat="depense in depenses.records">
+      <td>{{ $index + 1 }}</td>
+      <td>{{depense.payeur}}</td>
+      <td>{{depense.montant}}</td>
+      <td>{{depense.concernes}} </td>
+      <td>{{depense.date}} </td>
+      <td>{{depense.nbconcernes}} </td>
+      <td>{{depense.usergroup}} </td>
+      <td>{{depense.description}} </td>
+     
+   
+    </tr>
+   
+    
+  </tbody>
+</table>
+</div>
+</section>
+
+<!--<script type="text/javascript">
+// '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .
+$(window).on("load resize ", function() {
+  var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+  $('.tbl-header').css({'padding-right':scrollWidth});
+}).resize();
+</script>-->
+
+</body>
+</html>

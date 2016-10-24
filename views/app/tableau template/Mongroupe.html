@@ -3,12 +3,11 @@
 <html lang="fr" ng-app="myApp">
   <head>
     <meta charset="UTF-8">
-    <title>Mon groupe</title>
     <link rel="stylesheet" href="mongrup.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
-<script src="app.js"></script>
+    <script src="app.js"></script>
   </head>
-<body>
+<body ng-controller="UsersCtrl">
 
 <section> 
 <h2>Liste des users</h2>  
@@ -24,23 +23,19 @@
   </thead>
 </table>
 </div>
-<div  class="tbl-content" ng-controller="UsersCtrl">
-<table cellpadding="0" cellspacing="0" border="0">
-  <tbody>
-
-    <tr class="user" ng-repeat="user in users.records | orderBy : 'username'">
-      <td>{{ $index + 1 }}</td>
-      <td>{{user.username}}</td>
-      <td>{{user.usergroup}}</td>
-      <td>{{user.usercolor | uppercase}} </td>
-    </tr>
-
+<div  class="tbl-content">
+  <table cellpadding="0" cellspacing="0" border="0">
+    <tbody>
+      <tr class="user" ng-repeat="user in users | orderBy : 'username'">
+        <td>{{ $index + 1 }}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.usergroup}}</td>
+        <td>{{user.usercolor | uppercase}} </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
-    
-  </tbody>
-</table>
-</div>
 </section>
 
 
@@ -63,24 +58,20 @@
 </table>
 </div>
 <div  class="tbl-content" ng-controller="DepensesCtrl">
-<table cellpadding="0" cellspacing="0" border="0">
-  <tbody>
-
-    <tr class="depense" ng-repeat="depense in depenses.records">
-      <td>{{ $index + 1 }}</td>
-      <td>{{depense.Payeur}}</td>
-      <td>{{depense.Montant}}</td>
-      <td>{{depense.Concernes}} </td>
-      <td>{{depense.Date}} </td>
-      <td>{{depense.nbConcernes}} </td>
-      <td>{{depense.usergroup}} </td>
-      <td>{{depense.Description}} </td>
-     
-    </tr>
-   
-    
-  </tbody>
-</table>
+  <table cellpadding="0" cellspacing="0" border="0">
+    <tbody>
+      <tr class="depense" ng-repeat="depense in depenses.records">
+        <td>{{ $index + 1 }}</td>
+        <td>{{aUsers[depense.Payeur]}}</td>
+        <td>{{depense.Montant}}</td>
+        <td>{{depense.Concernes}} </td>
+        <td>{{depense.Date}} </td>
+        <td>{{depense.nbConcernes}} </td>
+        <td>{{depense.usergroup}} </td>
+        <td>{{depense.Description}} </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 </section>
 
